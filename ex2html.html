@@ -1,0 +1,47 @@
+<html ng-app="FirstApp">
+<head>
+    <style type="text/css">
+    table,th,td 
+    {
+        
+        padding:5px;
+        border: 2px solid #FC8585;
+        text-align: left;
+    }
+    </style>
+</head>
+<body>
+<div ng-controller="FirstController">
+    <div>
+     
+     Name  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" ng-model="name">   <br><br>
+     Email_id :       <input type="text" ng-model="email"><br><br>
+     DOB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" ng-model="dob"><br><br>
+     <input type="submit" value="submit" ng-click="submit()"/> 
+     
+        <br><br>
+          <h2>Hello!!!!</span></h2>
+            <table>
+                <tr>
+                <th>Name</th>
+                <th>Email_id</th>
+                <th>DOB</th>
+                <th>update</th>
+                <th>delete</th>
+                </tr>
+                <tr ng-repeat="val in emp">
+                <td>{{val.name}}</td>
+                <td>{{val.email}}</td>
+                <td>{{val.dob}}</td>
+                <td><input type="button" value="update"  ng-click="update(val)"/></td>
+                <td><input type="button" value="delete" ng-click="delete(val)"/></a></td>
+                    </tr>
+            </table>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
